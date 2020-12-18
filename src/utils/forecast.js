@@ -28,11 +28,16 @@ const forecast = (latitude, longitude, callback) => {
             callback('Unable to find location', undefined)
         }
         else {
-            callback(undefined, {
+            // console.log(body.forecast.forecastday[0].day)
+            callback(undefined,{
+
+                
                 latitude:'Latitude is '+ latitude,
                 longitude: 'Longitude is '+longitude,
                 temperature_F: 'Temperature is ' + body.current.temp_f +' fahrenheit',
-                location: 'Location is ' + body.location.name + ',' + body.location.region + ',' + body.location.country
+                // location: 'Location is ' + body.location.name + ',' + body.location.region + ',' + body.location.country,
+                // Max_Temp_C:body.forecast.forecastday[0].day.maxtemp_c+'Celcius',
+                // Min_Temp_C:body.forecast.forecastday[0].day.mintemp_c+'Celcius'
                 
 
             })

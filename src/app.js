@@ -92,7 +92,9 @@ app.get('/weather', (req, res) => {
                 location,
                 address:req.query.address,
                 latitude,
-                longitude
+                longitude,
+                
+            
                 
             })
         })

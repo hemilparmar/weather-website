@@ -28,6 +28,7 @@ const messageTwo = document.querySelector('#message-2')
 const messageThree = document.querySelector('#message-3')
 const messageFour = document.querySelector('#message-4')
 
+
 // messageOne.textContent = 'From JS'
 
 weatherForm.addEventListener('submit', (e) => {
@@ -41,6 +42,8 @@ weatherForm.addEventListener('submit', (e) => {
     messageTwo.textContent = ''
     messageThree.textContent = ''
     messageFour.textContent = ''
+  
+    
     fetch(' /weather?address=' + location).then((response) => {
         response.json().then((data) => {
             if (data.error) {
@@ -54,6 +57,8 @@ weatherForm.addEventListener('submit', (e) => {
                 messageTwo.textContent = data.forecastData.latitude
                 messageThree.textContent = data.forecastData.longitude
                 messageFour.textContent = data.forecastData.temperature_F
+               
+        
 
             }
         })
